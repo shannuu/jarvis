@@ -4,7 +4,7 @@ import webbrowser
 import os
 
 while True:
-    query = input('Hukum Do Mere Aaka: ')
+    query = input('\nHukum Do Mere Aaka: ')
     if 'wikipedia' in query:
         print('Searching Wikipedia...', 0)
         query = query.replace("wikipedia", "")
@@ -29,11 +29,11 @@ while True:
             webbrowser.open("https://youtube.com")
             print("opening youtube....", 0)
 
-        elif 'open google' in query:
+        elif 'google' in query:
             webbrowser.open("google.com")
 
-        elif 'open stackoverflow' in query:
-            webbrowser.open("stackoverflow.com")
+        elif 'stackoverflow' in query:
+            webbrowser.open("https://stackoverflow.com")
 
         else:
             link = input('Option not found, Please enter the url: ')
