@@ -30,7 +30,7 @@ while True:
             print("opening youtube....", 0)
 
         elif 'google' in query:
-            webbrowser.open("google.com")
+            webbrowser.open("https://google.com")
 
         elif 'stackoverflow' in query:
             webbrowser.open("https://stackoverflow.com")
