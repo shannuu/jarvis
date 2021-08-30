@@ -40,13 +40,16 @@ while True:
             print(link ,0)
             webbrowser.open(link)   
 
-    elif 'play music' in query:
-        music_dir = 'enter the path'
-        songs = os.listdir(music_dir)
-        print(songs)    
-        os.startfile(os.path.join(music_dir, songs[0]))
+    elif 'music' in query:
+        music_dir = input('enter the path');
+        try:
+            songs = os.listdir(music_dir)
+            print(songs)    
+            os.startfile(os.path.join(music_dir, songs[0]))
+        except:
+            speak("unknown error")
 
-    elif 'the time' in query:
+    elif 'time' in query:
         strTime = datetime.datetime.now().strftime("%H:%M:%S")    
         print(f"Sir, the time is {strTime}", 0)
 
@@ -64,7 +67,7 @@ while True:
         print('     play music')
         print('     time')
         print('     print')
-        print('     Control + C')
+        print('     Control + C to exit')
 
     else:
         print(f'Error: No Command Named {query}')
