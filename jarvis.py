@@ -47,7 +47,7 @@ while True:
             print(songs)    
             os.startfile(os.path.join(music_dir, songs[0]))
         except:
-            speak("unknown error")
+            print("unknown error")
 
     elif 'time' in query:
         strTime = datetime.datetime.now().strftime("%H:%M:%S")    
